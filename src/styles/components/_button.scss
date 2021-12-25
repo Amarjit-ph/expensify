@@ -1,0 +1,21 @@
+.button{
+    background:$blue;
+    border: none;
+    color: white;
+    font-weight: 300;
+    display: inline-block;
+    font-size:$font-size-large;
+    padding: $s-size;
+    line-height: 1;
+    text-decoration: none;
+
+}
+
+.button--link{
+    background: none;
+    font-weight:400;
+}
+
+.button--delete{
+    background:red;
+}

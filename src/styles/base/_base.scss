@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    color:white;
+    line-height: 1.6;
+    overflow: hidden;
+}
+button{
+    cursor: pointer;
+}
+button:disabled{
+    cursor: default;
+}
+
+.is-active{
+    font-weight: bold;
+}
+
