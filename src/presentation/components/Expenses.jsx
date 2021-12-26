@@ -11,7 +11,7 @@ import ExpenseList from "../../components/ExpenseList";
 
 export const Expenses = () => {
     return (
-        <div class="w-full mt-3 ml-4 md:space-y-4">
+        <div class="w-full ml-4 md:space-y-4">
             <ExpensesSummary />
             <ExpenseListFilters />
             <ExpenseList />

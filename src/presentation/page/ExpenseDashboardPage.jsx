@@ -12,7 +12,7 @@ export const ExpenseDashboardPage = (props) => {
         setActiveNavNumber(navNumber);
     }
     return(
-        <main class="bg-gray-100 dark:bg-gray-800 h-full w-full">
+        <main class="bg-gray-100 dark:bg-gray-800 h-screen w-full">
             <div class="flex items-start justify-between ">
                 <div class="h-screen lg:block shadow-lg relative w-80">
                     <div class="bg-white h-full dark:bg-gray-700">
