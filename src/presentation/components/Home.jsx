@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-import { firebase } from '../../firebase/firebase';
+import moment from "moment";
 import { connect } from 'react-redux';
 import selectExpenses from '../../selector/expenses';
 import selectExpensesTotal from '../../selector/expenses-total';
@@ -21,6 +21,19 @@ const Home = ({expenseCount,expensesTotal,expensesMonthlyTotal,expensesYearlyTot
         dispatch(setStartDate(0));
         dispatch(setEndDate(0));
     },);
+    const generateGreetings=()=>{
+        if (moment().isBetween(5, 12, 'HH')){
+            return "Good Morning !";
+        } else if (moment().isBetween(12, 15, 'HH')){
+            return "Good Afternoon !";
+        }   else if (moment().isBetween(15, 20, 'HH')){
+            return "Good Evening !";
+        } else if (moment().isBetween(20, 3, 'HH')){
+            return "Good Night !";
+        } else {
+            return "Hello ! 🦉"
+        }
+    }
     const visualSpending = (expensesTotal) =>{
         const percentage = (expensesTotal/480000)*100;
         if(percentage<5){
@@ -62,11 +75,11 @@ const Home = ({expenseCount,expensesTotal,expensesMonthlyTotal,expensesYearlyTot
     }
 
     return (
-        <div class="flex flex-col w-full mt-3 ml-3 md:space-y-4">
+        <div class="flex flex-col w-full mt-1 ml-3 md:space-y-4">
             
             <div class="overflow-auto h-screen pb-24 px-4 pt-5 md:px-6">
                 <h1 class="text-3xl font-bold text-gray-800">
-                    Good Evening ! 
+                    {generateGreetings()}
                 </h1>
                 <h1 class="text-4xl mt-1 font-semibold text-indigo-600 ">
                 {displayName}
