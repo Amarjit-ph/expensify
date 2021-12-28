@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-import moment from "moment";
+import moment, { now } from "moment";
 import { connect } from 'react-redux';
 import selectExpenses from '../../selector/expenses';
 import selectExpensesTotal from '../../selector/expenses-total';
@@ -21,17 +21,20 @@ const Home = ({expenseCount,expensesTotal,expensesMonthlyTotal,expensesYearlyTot
         dispatch(setStartDate(0));
         dispatch(setEndDate(0));
     },);
-    const generateGreetings=()=>{
-        if (moment().isBetween(5, 12, 'HH')){
-            return "Good Morning !";
-        } else if (moment().isBetween(12, 15, 'HH')){
-            return "Good Afternoon !";
-        }   else if (moment().isBetween(15, 20, 'HH')){
+
+    const generateGreetings = ()=>{
+        const time = moment(now()).format('HH');
+        if(time>=0 && time<4){
+            return "Hello ! 🦉";
+        }
+        else if(time>=4 && time<12){
+            return "Good Morning ! 🌞";
+        }
+        else if(time>=12 && time<18){
+            return "Good Afternoon !";   
+        }
+        else{
             return "Good Evening !";
-        } else if (moment().isBetween(20, 3, 'HH')){
-            return "Good Night !";
-        } else {
-            return "Hello ! 🦉"
         }
     }
     const visualSpending = (expensesTotal) =>{
@@ -75,9 +78,9 @@ const Home = ({expenseCount,expensesTotal,expensesMonthlyTotal,expensesYearlyTot
     }
 
     return (
-        <div class="flex flex-col w-full mt-1 ml-3 md:space-y-4">
+        <div class="flex flex-col w-full h-full p-7">
             
-            <div class="overflow-auto h-screen pb-24 px-4 pt-5 md:px-6">
+            <div class="overflow-auto">
                 <h1 class="text-3xl font-bold text-gray-800">
                     {generateGreetings()}
                 </h1>

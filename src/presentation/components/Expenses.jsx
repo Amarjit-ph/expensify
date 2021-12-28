@@ -11,10 +11,14 @@ import ExpenseList from "../../components/ExpenseList";
 
 export const Expenses = () => {
     return (
-        <div class="w-full ml-4 md:space-y-4">
-            <ExpensesSummary />
-            <ExpenseListFilters />
-            <ExpenseList />
+        <div class="flex flex-col pl-3 pb-10 h-full overflow-scroll overflow-x-hidden">
+            <div className='mb-5 mr-3'>
+                <ExpensesSummary />
+                <ExpenseListFilters />
+            </div>
+            <div className='flex-grow'>
+                <ExpenseList />
+            </div>
         </div>
     );
 }

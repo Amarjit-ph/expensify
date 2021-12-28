@@ -11,14 +11,10 @@ import selectExpense from '../selector/expenses';
 
 
 const ExpenseList = (props) => (
-    <div className="px-4 h-96 overflow-scroll overflow-x-hidden" style={{
-        height:"417px"
-    }}
-    >
-
-        <table class="table p-4 bg-white shadow rounded-lg w-full text-left">
-            <thead >
-                <tr>
+    <div className="px-4">
+        <table class="table bg-white shadow rounded-lg w-full text-left">
+            <thead>
+                <tr className='sticky mt-5 top-0 bg-gray-300'>
                     <th class="border-b-2 p-4 dark:border-dark-5 whitespace-nowrap font-bold text-gray-900 ">
                         #
                     </th>
