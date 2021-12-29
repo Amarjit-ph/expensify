@@ -6,10 +6,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { startLogin } from '../../actions/auth';
+{/* <div className="sm:mt-28 md:mt-28 h-screen mx-auto max-w-4xl lg:mt-28 xl:mt-36"></div> */}
 export const LoginPage = ({ startLogin }) => ( 
-    <div className="sm:mt-28 md:mt-28 h-screen mx-auto max-w-4xl lg:mt-28 xl:mt-36">
-            {/* <main class="h-1/3 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28"> */}
-            <main class="px-4  sm:px-6 lg:px-8">
+    <div className='h-screen w-screen flex items-center justify-center'>
+        <main class="mb-20 max-w-4xl">
                 <div class="sm:text-center md:text-center lg:text-center">
                     <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-3xl md:text-4xl">
                         <span class="block text-indigo-600 text-7xl">Expensify</span>
@@ -21,7 +21,7 @@ export const LoginPage = ({ startLogin }) => (
                         It's not how much money you make, but how much money you keep, how hard it works for you,
                         and how many generations you keep it for. - Robert Kiyosaki
                     </p>
-                    {/* <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start"> */}
+                    
                     <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-center">
                         <div class="rounded-md shadow">
                             <button onClick={startLogin} class="w-full flex items-center justify-center px-8 
