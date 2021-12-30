@@ -30,7 +30,7 @@ export const LoginPage = ({ startLogin }) => (
                             </button>
                         </div>
                         <div class="mt-3 sm:mt-0 sm:ml-3">
-                            <a href="https://github.com/Amarjit-ph/expensify-app" target="_blank" 
+                            <a href="https://github.com/Amarjit-ph/Expensify" target="_blank" 
                             class="w-full flex items-center justify-center px-8 py-3 border border-transparent
                             text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-2 md:text-base md:px-5">
                                 Get Source code
